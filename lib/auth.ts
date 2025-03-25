@@ -10,6 +10,10 @@ const settings = {
   emailAndPassword: {
     enabled: true,
   },
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://playlist-maker-production.up.railway.app",
+  ],
   database: db,
 };
 
