@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { authClient } from '~/lib/auth-client'
-import { useRouter } from 'vue-router'
 
 const router = useRouter()
 

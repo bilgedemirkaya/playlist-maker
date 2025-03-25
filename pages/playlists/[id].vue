@@ -98,8 +98,6 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute, useRouter } from "vue-router";
-import { onMounted, ref } from "vue";
 import { authClient } from "~/lib/auth-client";
 import type { Track } from "~/types/index.types";
 

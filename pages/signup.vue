@@ -65,9 +65,7 @@
   </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import { authClient } from "~/lib/auth-client";
-import { useRouter } from "vue-router";
 import { useAuth } from '~/composables/useAuth'
 
 const { fetchUser } = useAuth();

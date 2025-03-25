@@ -53,8 +53,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue"
-import { useRouter } from "vue-router"
 import { authClient } from "~/lib/auth-client"
 import { useAuth } from '~/composables/useAuth'
 

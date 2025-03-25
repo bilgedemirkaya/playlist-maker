@@ -25,8 +25,6 @@
 
 <script setup lang="ts">
 import { useAuth } from '~/composables/useAuth'
-import { useRouter } from 'vue-router'
-import { onMounted } from 'vue'
 
 const router = useRouter();
 const { user, fetchUser, logout } = useAuth();

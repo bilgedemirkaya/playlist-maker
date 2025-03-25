@@ -54,9 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from "vue-router";
 import { authClient } from "~/lib/auth-client";
-import { onMounted, ref } from "vue";
 import type { Playlist } from "~/types/index.types";
 import CreatePlaylistModal from "~/components/CreatePlaylistModal.vue";
 
