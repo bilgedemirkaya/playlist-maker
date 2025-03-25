@@ -9,9 +9,9 @@ export default defineEventHandler(async (event): Promise<Playlist[]> => {
     throw createError({ statusCode: 401, statusMessage: "Unauthorized" });
   }
 
-  const url = new URL(event.node.req.url || "", "http://localhost");
-  const limit = parseInt(url.searchParams.get("limit") || "10");
-  const offset = parseInt(url.searchParams.get("offset") || "0");
+  const query = getQuery(event)
+  const limit = parseInt((query.limit as string) || "10")
+  const offset = parseInt((query.offset as string) || "0")
 
   const userId = session.user.id;
 
