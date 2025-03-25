@@ -14,7 +14,7 @@
 
     <!-- Helper Texts -->
     <div v-if="loading">Loading playlists...</div>
-    <div v-else-if="playlists.length === 0" class="text-gray-600">
+    <div v-else-if="playlists.length === 0 && !loading" class="text-gray-600">
       You haven't created any playlists yet.
     </div>
     <div v-else-if="playlistFetchError" class="text-red-500">
@@ -63,14 +63,12 @@ import CreatePlaylistModal from "~/components/CreatePlaylistModal.vue";
 const PLAYLIST_LIMIT = 10;
 const router = useRouter();
 const playlists = ref<Playlist[]>([]);
-const loading = ref(false);
+const loading = ref(true);
 const playlistFetchError = ref<boolean>(false);
 
 const showModal = ref(false);
 
 onMounted(async () => {
-  loading.value = true;
-
   const session = await authClient.getSession();
   if (!session.data?.session) {
     router.push("/login");
