@@ -36,9 +36,10 @@
 
           <button
             class="text-sm text-red-500 hover:text-red-700"
+            aria-label="Delete playlist"
             @click="deletePlaylist(playlist.id)"
           >
-            Delete
+          🗑️ Delete
           </button>
         </div>
       </li>
@@ -65,7 +66,6 @@ const loading = ref(true);
 const playlistFetchError = ref<boolean>(false);
 
 const showModal = ref(false);
-
 onMounted(async () => {
   const session = await authClient.getSession();
   if (!session.data?.session) {

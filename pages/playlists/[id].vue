@@ -111,6 +111,11 @@ const allTracks = ref<Track[]>([]);
 const playlistName = ref("");
 const editingName = ref(false);
 
+// Set title of the page
+useHead({
+  title: `Playlist #${route.params.id} | Playlist Maker`,
+})
+
 onMounted(async () => {
   // Fetch playlist info to get the name
   const { data: playlistInfo } = await useFetch(

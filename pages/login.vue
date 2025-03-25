@@ -32,7 +32,7 @@
         </div>
 
         <!-- Helper Message -->
-        <div v-if="error" class="text-red-600 text-sm">{{ error }}</div>
+        <div v-if="error" class="text-red-600 text-sm" aria-live="polite">{{ error }}</div>
         <div v-if="loading" class="text-blue-500 text-sm">Logging in...</div>
 
         <button

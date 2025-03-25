@@ -2,5 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss']
+  modules: ['@nuxtjs/tailwindcss'],
+    app: {
+      head: {
+        htmlAttrs: {
+          lang: 'en',
+        },
+        title: 'Playlist Maker',
+      }
+    }
 })
